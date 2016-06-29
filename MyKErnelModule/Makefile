@@ -1,4 +1,4 @@
-obj-m := lkm.o
+obj-m := memory.o
 KDIR := /lib/modules/$(shell uname -r)/build
 PWD := $(shell pwd)
 all:
