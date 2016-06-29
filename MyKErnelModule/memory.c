@@ -95,8 +95,8 @@ ssize_t memory_read(struct file *filp, char *buf, size_t count, loff_t *f_pos) {
   copy_to_user(buf, memory_buffer, MYBUFF);
 printk("memory_read\n");
   if (*f_pos == 0) {
-    *f_pos += 1;
-    return 1;
+    *f_pos += MYBUFF;
+    return MYBUFF;
   }
   else {
     return 0;
